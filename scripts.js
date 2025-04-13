@@ -51,8 +51,8 @@ function randomly(){
 }
 
 //1. Escribe una función que tome dos cadenas de texto como argumentos y devuelva su concatenación.
-let string1 = "1";
-let string2 = "2";
+let string1 = "un gatito";
+let string2 = "dos perritos";
 function concetenation(string1, string2){
     return string1+string2;
 }
@@ -82,9 +82,34 @@ function reversed(string1){
 }
 
 // 7. Escribe una función que tome una cadena de texto y un carácter como argumentos, y devuelva la cantidad de veces que el carácter aparece en la cadena.
-function times(string1, character){
-    return 
+function countCharacter(string1, character){
+    let counter = 0;
+    for (let i = 0; i < string1.lenght; i++) {
+        if (string1[i] == character) {
+        counter ++;
+        }   
+    }
+    return counter;
 }
 // 8. Escribe una función que tome una cadena de texto como argumento y devuelva la misma cadena sin espacios en blanco.
+function removeBlank (string1) {
+    return string1.trim();
+}
 // 9. Escribe una función que tome una cadena de texto como argumento y devuelva true si es un palíndromo (se lee igual de izquierda a derecha y de derecha a izquierda), o false si no lo es.
+function palindrom(string1) {
+    let reverseString1 = string1.split("").reverse().join("");
+    if (string1 == reverseString1) {
+        return true;
+    } else {
+        return false;
+    }
+}
 // 10. Escribe una función que tome una cadena de texto como argumento y devuelva la misma cadena con la primera letra de cada palabra en mayúscula.
+function firstLetter(string1) {
+    let eachWord = string1.split(" ");
+    for (let i = 0; i < eachWord.length; i++) {
+        eachWord[i] = eachWord[i].charAt(0).toUpperCase() + eachWord[i].slice(1);
+    }
+    return eachWord.join(" ");
+}
+console.log(firstLetter(string1));
