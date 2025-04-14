@@ -117,15 +117,26 @@ function firstLetter(string1) {
 let numbers = [1, 2, 3, 4, 5]
 function sumArray (numbers) {
     let sum = 0;
-    for (i = 0; i < numbers.length; i++) {
-        sum += numbers[i];
+    for (let i = 0; i < numbers.length; i++) {
+        sum = sum + numbers[i];
     }
     return sum;
 }
 
 // 2. Escribe una función que tome un array de números como argumento y devuelva el promedio de todos sus elementos.
+function  average(numbers) {
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        sum = sum + numbers[i];
+    }
+    return sum / numbers.length;
+}
 
 // 3. Escribe una función que tome un array de números como argumento y devuelva el array ordenado de forma ascendente.
+let unorderNum = [2, 4, 5, 3, 1]
+function orderedArray(unorderNum){
+    
+} 
 // 4. Escribe una función que tome un array de números y un número como argumentos, y devuelva un nuevo array con los elementos mayores al número dado.
 // 5. Escribe una función que tome dos arrays como argumentos y devuelva un nuevo array con todos los elementos de ambos arrays.
 // 6. Escribe una función que tome un array de números como argumento y devuelva el número máximo dentro del array.
