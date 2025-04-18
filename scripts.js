@@ -135,12 +135,72 @@ function  average(numbers) {
 // 3. Escribe una función que tome un array de números como argumento y devuelva el array ordenado de forma ascendente.
 let unorderNum = [2, 4, 5, 3, 1]
 function orderedArray(unorderNum){
-    
+    unorderNum.sort(function(a, b) {
+        return a - b;
+    });
+    return unorderNum;
 } 
 // 4. Escribe una función que tome un array de números y un número como argumentos, y devuelva un nuevo array con los elementos mayores al número dado.
+let num = 2 
+let biggerThanNum = []
+function numBigger(numbers, num) {
+    for (let i = 0; i<numbers.length; i++) {
+        if (numbers[i] > num) {
+            biggerThanNum.push(numbers[i]);
+        } 
+    }
+    return biggerThanNum;
+}
+
 // 5. Escribe una función que tome dos arrays como argumentos y devuelva un nuevo array con todos los elementos de ambos arrays.
+let arrayOne = [1, 3, 5, 7, 9]
+let arrayTwo = [2, 4, 6, 8]
+function arraySum (arrayOne, arrayTwo) {
+    return arrayOne.concat(arrayTwo);
+}
 // 6. Escribe una función que tome un array de números como argumento y devuelva el número máximo dentro del array.
+function maxNum (numbers) {
+    let max = numbers[0];
+    for(let i = 0; i < numbers.length; i++) {
+        if (numbers[i] > max) {
+            max = numbers[i];
+        }
+    }
+    return max;
+}
 // 7. Escribe una función que tome un array de números como argumento y devuelva el número mínimo dentro del array.
+function minNum (numbers) {
+    let min = numbers[0];
+    for(let i = 0; i < numbers.length; i++) {
+        if (numbers[i] < min) {
+            min = numbers[i];
+        }
+    }
+    return min;
+}
 // 8. Escribe una función que tome un array y un elemento como argumentos, y devuelva la cantidad de veces que el elemento aparece en el array.
+let randomNums = [1, 2, 2, 3, 3, 4, 4, 4, 7, 7, 8]
+function howManyOfNum (randomNums, number) {
+    let counter = 0
+    for(let i = 0; i < randomNums.length; i++) {
+        if (randomNums[i] === number) {
+            counter ++
+        }
+    }
+    return counter;
+}
 // 9. Escribe una función que tome un array como argumento y devuelva un nuevo array sin elementos duplicados.
+function removeRepeated (randomNums) {
+    let randomNumsNoRepeat = []
+    for(let i = 0; i < randomNums.length; i++) {
+        if (randomNumsNoRepeat.includes(randomNums[i]) === false) {
+            randomNumsNoRepeat.push(randomNums[i]);
+        }
+    }
+    return randomNumsNoRepeat
+}
+
 // 10. Escribe una función que tome un array como argumento y devuelva un nuevo array con los elementos en orden inverso.
+function invertArray (numbers) {
+    return numbers.slice().reverse();
+}
